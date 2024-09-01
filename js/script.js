@@ -54,5 +54,24 @@ createApp(
                 active: 0
             };
         },
+
+        methods:{
+            next() {
+                if(this.active < this.slides.length - 1) {
+                    this.active++;
+                }
+                else {
+                    this.active=0;
+                }
+            },
+            prev() {
+                if(this.active > 0) {
+                    this.active--;
+                }
+                else {
+                    this.active= this.slides.length - 1;
+                }
+            }
+        }
     }
 ).mount('#app');
